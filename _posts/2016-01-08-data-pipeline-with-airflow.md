@@ -3,9 +3,6 @@ layout: post
 title: Price difference project (Airflow data pipeline)
 ---
 
-
-## Project Overview
-
 I prepared this project to show a data pipeline built with Airflow. It is a simple example of fetching some Uniswap swap data (WETH/USDC) of a single user from Dune using their API and comparing the prices with Crypto Compare's API.
 I also created a PostgreSQL database on my private AWS account where the data is stored as the job is running in Airflow. Airflow is meant to just run locally in this example.
 The pipeline fetches, processes, and stores trading and market data. Finally, a column with the price differende per trade is calculated along with an average of all trade being printed out in the logs.
