@@ -4,19 +4,17 @@ title: Price difference project (Airflow data pipeline)
 ---
 
 I prepared this project to show a data pipeline built with Airflow. It is a simple example of fetching some Uniswap swap data (WETH/USDC) of a single user from Dune using their API and comparing the prices with Crypto Compare's API.
-I also created a PostgreSQL database on my private AWS account where the data is stored as the job is running in Airflow. Airflow is meant to just run locally in this example.
-The pipeline fetches, processes, and stores trading and market data. Finally, a column with the price differende per trade is calculated along with an average of all trade being printed out in the logs.
 
-See the full repo here: [Price difference project](https://github.com/Kasper-Birkelund/price_difference_project)
+## Project Components
 
-### Project Components
-
+- **Github repo**: See the full repo here: [Price difference project](https://github.com/Kasper-Birkelund/price_difference_project)
+- **Airflow**: Orchestrates the pipeline's tasks on a adaily basis.
 - **AWS PostgreSQL Database**: Stores all data.
 - **Dune Analytics**: Data on swaps are fetched from a Dune query, allowing parameterized fetching to retrieve only the most recent data. [View the query here](https://dune.com/queries/3941831/6630301).
 - **Crypto Compare API**: Provides near-real-time market prices to compare against trade execution prices.
-- **Airflow**: Orchestrates the pipeline's tasks on a adaily basis.
 
-### Repository Structure
+
+## Repository Structure
 
 In this repository please explore the following key directories and files:
 
@@ -25,7 +23,7 @@ In this repository please explore the following key directories and files:
 - `Dockerfile, docker-compose.yml, .env and requirements.txt`: These files are used to build the docker container.
 - `notebooks`: If you want to try to interact with the code with a jupyter notebook. If so you need to active the .conda virtual environment or build your own using the requirements_local_conda.txt file.
 
-### Running the Project
+## Running the Project
 
 1. **Environment Setup**: Ensure Docker and VS Code are installed.
 2. **Start the Application**:
@@ -43,14 +41,14 @@ In this repository please explore the following key directories and files:
      [2024-07-29T13:04:29.342+0000] {calculate_price_improvement.py:24} INFO - ### The average price difference for all the swaps was -0.175 percent ###
      ```
 
-### Stopping the Project and clean up
+## Stopping the Project and clean up
 
 To halt the project and clean up Docker images, use:
 ```bash
 docker compose down --rmi all
 ```
 
-### Considerations and improvements for production readiness
+## Considerations and improvements for production readiness
 
 Unfortunately it Crypto Compare only has the last 7 days of prices on the minute granularity. So I opted for Cryptoo Compare daily closing prices:
 
