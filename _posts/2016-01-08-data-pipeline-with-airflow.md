@@ -1,3 +1,8 @@
+---
+layout: post
+title: Price difference project (Airflow data pipeline)
+---
+
 
 ## Project Overview
 
