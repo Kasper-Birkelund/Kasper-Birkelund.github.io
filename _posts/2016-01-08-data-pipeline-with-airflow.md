@@ -29,7 +29,9 @@ In this repository please explore the following key directories and files:
 2. **Start the Application**:
    - Open the project folder in VS Code.
    - Run below docker command and wait for the services to initialize:
-   ```bash docker compose up```
+   ```bash
+   docker compose up
+   ```
 3. **Access Airflow UI**:
    - Navigate to [http://localhost:8080/home](http://localhost:8080/home) in your web browser.
    - Log in with username __airflow__ and password __airflow__.
@@ -43,7 +45,9 @@ In this repository please explore the following key directories and files:
 ## Stopping the Project and clean up
 
 To halt the project and clean up Docker images, use:
-```bash docker compose down --rmi all ```
+```bash
+docker compose down --rmi all
+```
 
 ## Considerations and improvements for production readiness
 
