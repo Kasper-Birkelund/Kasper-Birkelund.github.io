@@ -10,7 +10,7 @@ I prepared this project to show a data pipeline built with Airflow. It is a simp
 - **Github repo**: See the full repo here: [Price difference project](https://github.com/Kasper-Birkelund/price_difference_project)
 - **Airflow**: Orchestrates the pipeline's tasks on a adaily basis.
 - **AWS PostgreSQL Database**: Stores all data.
-- **Dune Analytics**: Data on swaps are fetched from a Dune query, allowing parameterized fetching to retrieve only the most recent data. [View the query here](https://dune.com/queries/3941831/6630301).
+- **Dune Analytics**: Data on swaps are fetched from a Dune query, allowing parameterized fetching to retrieve only the most recent data. [View the query here](https://dune.com/queries/4002884).
 - **Crypto Compare API**: Provides near-real-time market prices to compare against trade execution prices.
 
 
